@@ -12,7 +12,7 @@ public class TicketManagementMainApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TicketManagementMainApplication.class, args);
-		//kusuma hhjhjh
+		//aish
 	}
 	
 	@Bean//singleTon map objectt
