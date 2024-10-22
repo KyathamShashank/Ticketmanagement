@@ -1,6 +1,7 @@
 package com.nt.model;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -11,10 +12,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="employee")
+@Entity
 public class Employee {
 
 @Id
-int employeeId;
+Integer employeeId;
 
 @Column(length = 30)
 String employeeName;
@@ -22,7 +24,7 @@ String employeeName;
 @Column(length = 30)
 String employeeDesignation;
 
-long employeePhoneNumber;
+Long employeePhoneNumber;
 
 @Column(length = 30)
 String employeeEmail;

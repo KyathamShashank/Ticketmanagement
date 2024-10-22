@@ -5,10 +5,11 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
 import com.nt.model.Employee;
 import com.nt.repository.IEmployeeRepository;
-
+@Service
 public class EmployeeServiceImplementation implements IEmployeeService{
 	@Autowired
 	IEmployeeRepository employeeRepository;
@@ -16,7 +17,7 @@ public class EmployeeServiceImplementation implements IEmployeeService{
 	
 	
 	@Override
-	public ResponseEntity<Employee> showTesterProfile(int id) {
+	public ResponseEntity<Employee> showTesterProfile(Integer id) {
 		
 		Optional<Employee> employeeOptionalObject = employeeRepository.findById(id);
 		if(employeeOptionalObject.isPresent())
@@ -26,5 +27,7 @@ public class EmployeeServiceImplementation implements IEmployeeService{
 		}
 		return new ResponseEntity<>(null,HttpStatus.INTERNAL_SERVER_ERROR);
 	}
+	
+	
 
 }
