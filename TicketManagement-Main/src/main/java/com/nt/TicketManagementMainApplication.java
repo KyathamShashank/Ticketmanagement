@@ -14,7 +14,7 @@ public class TicketManagementMainApplication {
 		SpringApplication.run(TicketManagementMainApplication.class, args);
 	}
 	
-	@Bean//singleton map object
+	@Bean//singleTon map object 
 	public Map<String,Object> singletonMapObject()
 	{
 		return new HashMap<>();
