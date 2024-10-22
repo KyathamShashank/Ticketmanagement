@@ -18,7 +18,6 @@ public class EmployeeServiceImplementation implements IEmployeeService{
 	
 	@Override
 	public ResponseEntity<Employee> showTesterProfile(Integer id) {
-		
 		Optional<Employee> employeeOptionalObject = employeeRepository.findById(id);
 		if(employeeOptionalObject.isPresent())
 		{
