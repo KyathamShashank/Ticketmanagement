@@ -1,12 +1,7 @@
 package com.nt.model;
 
-import com.nt.enums.ProjectStatus;
-
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -29,11 +24,10 @@ public class ProjectMini
 	private Integer projectId;
 	@Column(length=30)
 	private String projectName;
-	@Column(length=30)
-	@Enumerated(EnumType.STRING)
-	private ProjectStatus status;
+	@Column(length=100)
+	private String projectSummary;
+	@Column(length=20)
+	private String status;
 	@Column(length=30)
 	private String assignBy;
-	@Column(length=30)
-	private String testerName;
 }
